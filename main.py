@@ -5,10 +5,8 @@ from colorama import Fore
 
 
 def clear():
-    # for windows
     if name == 'nt':
         _ = system('cls')
-    # for mac and linux(here, os.name is 'posix')
     else:
         _ = system('clear')
 
@@ -23,9 +21,8 @@ def printMenu():
 if "__main__" == __name__:
     args = sys.argv
 
-    args.pop(0)  # Remote 1st command from list
+    args.pop(0)
 
-    # check if args is greater then 1
     if len(args) > 1:
         print(Fore.RED + "Error: Too Many Arguments! Exiting...")
         exit(0)
