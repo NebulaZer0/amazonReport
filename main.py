@@ -44,6 +44,7 @@ if "__main__" == __name__:
             elif choice == 'b':
                 view = f"\n{Fore.CYAN} Average Spent Per Year: {Fore.GREEN} ${str(report.averageSpent())}\n"
             elif choice == 'c':
+                clear()
                 exit(1)
             else:
-                print(Fore.RED + "Error: Invalid Choice!")
+                view = f"\n{Fore.RED} ERROR: Invalid Choice\n"
